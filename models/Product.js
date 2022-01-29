@@ -9,20 +9,27 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
       allowNull: false,
+      primaryKey: true,
       autoIncrement: true
     },
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     price: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false,
+      validate: {
+        isDecimal: true
+      }
+    },
+    stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 10,
       validate: {
         isNumeric: true
       }
@@ -34,13 +41,6 @@ Product.init(
         model: 'category',
         key: 'id'
       }
-    },
-    stock: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      }
     }
   },
   {
@@ -48,7 +48,7 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product',
+    modelName: 'product'
   }
 );
 
