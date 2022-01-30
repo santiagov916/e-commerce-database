@@ -38,7 +38,7 @@
 
   ### People: Myself and the advice of my associates
   ### GitHub Username: santiagov916
-  ### GitHub Link to project: https://github.com/santiagov916/e-commerce-database/tree/main
+  ### GitHub Link to project: https://github.com/santiagov916/e-commerce-database
 
   ## Questions?
 
