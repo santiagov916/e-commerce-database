@@ -32,7 +32,7 @@
 
   ### Dependencies: dotenv , express , mysql , sequelize
   ### To install: npm i OR npm install
-  ### CLI to start: not a CLI
+  ### CLI to start: npm start, insomnia for testing
 
   ## Contributors
 
